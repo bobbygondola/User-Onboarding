@@ -18,6 +18,7 @@ function Form(props) {
         {errors.name}
         {errors.email}
         {errors.password}
+        {errors.termsOfService}
 
       </div>
             
@@ -54,7 +55,7 @@ function Form(props) {
           value={values.password}
           onChange={onInputChange}
           name='password'
-          type='text'
+          type='password'
         /></label>
 
 

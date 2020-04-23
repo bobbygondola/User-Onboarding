@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Form from "./Form";
 import "./App.css";
 
-//Todays Inputs
+
 import * as yup from "yup";
 import axios from "axios";
 
@@ -50,6 +50,10 @@ const formSchema = yup.object().shape({
     .string()
     .min(5, "must input 5 characters at least!")
     .required("password is required"),
+  termsOfService: yup
+    .string()
+    .matches(/(Agree|Agree)/, 'Please Agree to the Terms')
+    .required('Terms are Required..bro')
 });
 
 ////////////////////////////////////////////////////////////////////////
@@ -134,6 +138,8 @@ function App() {
         maybe.
       </p>
       </div>
+
+      
       {members.map((member) => {
         console.log(members)
       

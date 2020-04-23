@@ -123,17 +123,28 @@ function App() {
   console.log(members);
   return (
     <div className="App">
+      <div>
       <h1>Onboarding Form</h1>
-
+      <p>Welcome Aboard, Sign up for the chance to join our once in a lifetime coding team.
+        <br></br>
+        To join the team, you must pass the tests of inputting some data..
+        <br></br>
+        only then may you have a chance..
+        <br></br>
+        maybe.
+      </p>
+      </div>
       {members.map((member) => {
         console.log(members)
       
         return (
         <div key={member.name} id="card">
+          
           <p>Name: {member.name}</p>
           <p>Email: {member.email}</p>
         <p>Password: {member.password}</p>
         <p>Terms of Service: {member.termsOfService}</p>
+        
         </div>)
       })}
 
